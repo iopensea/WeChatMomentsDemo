@@ -73,7 +73,7 @@
                 [cell.contentView addSubview:title];
                 
                 UIImageView *leftImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-                leftImage.image = [UIImage imageNamed:@"AlbumReflashIcon"];
+                leftImage.image = [UIImage imageNamed:@"AlbumMomentIcon"];
                 [cell.contentView addSubview:leftImage];
                 
                 [leftImage mas_makeConstraints:^(MASConstraintMaker *make) {
