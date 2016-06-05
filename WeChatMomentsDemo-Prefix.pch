@@ -1,0 +1,48 @@
+//
+//  WeChatMomentsDemo-Prefix.pch
+//  WeChatMomentsDemo
+//
+//  Created by apple on 16/6/4.
+//  Copyright © 2016年 apple. All rights reserved.
+//
+
+#ifndef WeChatMomentsDemo_Prefix_pch
+#define WeChatMomentsDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+//**************All objective-c file's sharing header*****************
+
+#ifdef __OBJC__  //all objective-c file's sharing header
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#endif
+
+#define WeakSelf(a) __weak typeof(a) weakSelf = a
+#define kWMColor(r, g, b, a) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:a]
+
+#define kWMGreenColor [UIColor colorWithRed:10/255.0 green:200/255.0 blue:10/255.0 alpha:1.0]
+
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"function:%s line:%d NSlog:\n%s\n\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+#endif /* WeChatMomentsDemo_Prefix_pch */

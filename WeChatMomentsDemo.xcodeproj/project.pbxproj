@@ -9,12 +9,27 @@
 /* Begin PBXBuildFile section */
 		187608661D02F89B005C9A5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608651D02F89B005C9A5F /* main.m */; };
 		187608691D02F89B005C9A5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608681D02F89B005C9A5F /* AppDelegate.m */; };
-		1876086C1D02F89B005C9A5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876086B1D02F89B005C9A5F /* ViewController.m */; };
 		1876086F1D02F89B005C9A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1876086D1D02F89B005C9A5F /* Main.storyboard */; };
 		187608711D02F89B005C9A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187608701D02F89B005C9A5F /* Assets.xcassets */; };
 		187608741D02F89B005C9A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187608721D02F89B005C9A5F /* LaunchScreen.storyboard */; };
 		1876087F1D02F89C005C9A5F /* WeChatMomentsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876087E1D02F89C005C9A5F /* WeChatMomentsDemoTests.m */; };
 		1876088A1D02F89C005C9A5F /* WeChatMomentsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608891D02F89C005C9A5F /* WeChatMomentsDemoUITests.m */; };
+		1876089E1D030517005C9A5F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876089D1D030517005C9A5F /* HomeViewController.m */; };
+		187608AA1D031372005C9A5F /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608A91D031372005C9A5F /* BaseNavigationViewController.m */; };
+		187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608AF1D0313B3005C9A5F /* BaseViewController.m */; };
+		187608B31D031438005C9A5F /* FirstPageTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608B21D031438005C9A5F /* FirstPageTabBarController.m */; };
+		187609091D031CD0005C9A5F /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187608D41D031CD0005C9A5F /* Contacts.xcassets */; };
+		1876090A1D031CD0005C9A5F /* Discover.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187608D51D031CD0005C9A5F /* Discover.xcassets */; };
+		1876090B1D031CD0005C9A5F /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187608D61D031CD0005C9A5F /* Home.xcassets */; };
+		1876090D1D031CD0005C9A5F /* Me.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187608D81D031CD0005C9A5F /* Me.xcassets */; };
+		187609721D032062005C9A5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187609711D032062005C9A5F /* Images.xcassets */; };
+		187609801D03AB1A005C9A5F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876097F1D03AB1A005C9A5F /* BaseTableViewController.m */; };
+		187609861D03B39D005C9A5F /* MomentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609851D03B39D005C9A5F /* MomentTableViewController.m */; };
+		1876098C1D03B67E005C9A5F /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876098B1D03B67E005C9A5F /* DiscoverTableViewController.m */; };
+		1876098F1D03B8B9005C9A5F /* WMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876098E1D03B8B9005C9A5F /* WMNavigationViewController.m */; };
+		187609921D03CD46005C9A5F /* MomentCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609911D03CD46005C9A5F /* MomentCellModel.m */; };
+		187609981D03CDC9005C9A5F /* MomentCellCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */; };
+		1876099B1D03CDE9005C9A5F /* MomentCellFavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */; };
 		1E21438967FA7C2B295DC828 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4C78B6EA97342D49C7173E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +56,6 @@
 		187608651D02F89B005C9A5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187608671D02F89B005C9A5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		187608681D02F89B005C9A5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1876086A1D02F89B005C9A5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1876086B1D02F89B005C9A5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1876086E1D02F89B005C9A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		187608701D02F89B005C9A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187608731D02F89B005C9A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +66,34 @@
 		187608851D02F89C005C9A5F /* WeChatMomentsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeChatMomentsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187608891D02F89C005C9A5F /* WeChatMomentsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMomentsDemoUITests.m; sourceTree = "<group>"; };
 		1876088B1D02F89C005C9A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187608971D030341005C9A5F /* WeChatMomentsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeChatMomentsDemo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		1876089C1D030517005C9A5F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1876089D1D030517005C9A5F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		187608A81D031372005C9A5F /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
+		187608A91D031372005C9A5F /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
+		187608AE1D0313B3005C9A5F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		187608AF1D0313B3005C9A5F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		187608B11D031438005C9A5F /* FirstPageTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPageTabBarController.h; sourceTree = "<group>"; };
+		187608B21D031438005C9A5F /* FirstPageTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTabBarController.m; sourceTree = "<group>"; };
+		187608D41D031CD0005C9A5F /* Contacts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Contacts.xcassets; sourceTree = "<group>"; };
+		187608D51D031CD0005C9A5F /* Discover.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Discover.xcassets; sourceTree = "<group>"; };
+		187608D61D031CD0005C9A5F /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		187608D81D031CD0005C9A5F /* Me.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Me.xcassets; sourceTree = "<group>"; };
+		187609711D032062005C9A5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1876097E1D03AB1A005C9A5F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		1876097F1D03AB1A005C9A5F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		187609841D03B39D005C9A5F /* MomentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentTableViewController.h; sourceTree = "<group>"; };
+		187609851D03B39D005C9A5F /* MomentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentTableViewController.m; sourceTree = "<group>"; };
+		1876098A1D03B67E005C9A5F /* DiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewController.h; sourceTree = "<group>"; };
+		1876098B1D03B67E005C9A5F /* DiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
+		1876098D1D03B8B9005C9A5F /* WMNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNavigationViewController.h; sourceTree = "<group>"; };
+		1876098E1D03B8B9005C9A5F /* WMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationViewController.m; sourceTree = "<group>"; };
+		187609901D03CD46005C9A5F /* MomentCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellModel.h; sourceTree = "<group>"; };
+		187609911D03CD46005C9A5F /* MomentCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellModel.m; sourceTree = "<group>"; };
+		187609961D03CDC9005C9A5F /* MomentCellCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellCommentModel.h; sourceTree = "<group>"; };
+		187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellCommentModel.m; sourceTree = "<group>"; };
+		187609991D03CDE9005C9A5F /* MomentCellFavoriteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellFavoriteModel.h; sourceTree = "<group>"; };
+		1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellFavoriteModel.m; sourceTree = "<group>"; };
 		A5BBC0B1E36E6E30CB656E30 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FAAF12F146E130D784B28EDE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,12 +151,18 @@
 			children = (
 				187608671D02F89B005C9A5F /* AppDelegate.h */,
 				187608681D02F89B005C9A5F /* AppDelegate.m */,
-				1876086A1D02F89B005C9A5F /* ViewController.h */,
-				1876086B1D02F89B005C9A5F /* ViewController.m */,
+				187608971D030341005C9A5F /* WeChatMomentsDemo-Prefix.pch */,
 				1876086D1D02F89B005C9A5F /* Main.storyboard */,
+				187608A71D0312BD005C9A5F /* Common */,
+				187608A31D0312B7005C9A5F /* Base */,
+				1876089F1D0311ED005C9A5F /* FirstTabBarController */,
+				187608981D0304EE005C9A5F /* Home */,
+				187609731D03A9B6005C9A5F /* Moment */,
+				187608B41D031CD0005C9A5F /* Resources */,
 				187608701D02F89B005C9A5F /* Assets.xcassets */,
 				187608721D02F89B005C9A5F /* LaunchScreen.storyboard */,
 				187608751D02F89B005C9A5F /* Info.plist */,
+				187609711D032062005C9A5F /* Images.xcassets */,
 				187608641D02F89B005C9A5F /* Supporting Files */,
 			);
 			path = WeChatMomentsDemo;
@@ -145,6 +192,187 @@
 				1876088B1D02F89C005C9A5F /* Info.plist */,
 			);
 			path = WeChatMomentsDemoUITests;
+			sourceTree = "<group>";
+		};
+		187608981D0304EE005C9A5F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				187608991D0304EE005C9A5F /* Controller */,
+				1876089A1D0304EE005C9A5F /* Model */,
+				1876089B1D0304EE005C9A5F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		187608991D0304EE005C9A5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1876089C1D030517005C9A5F /* HomeViewController.h */,
+				1876089D1D030517005C9A5F /* HomeViewController.m */,
+				1876098A1D03B67E005C9A5F /* DiscoverTableViewController.h */,
+				1876098B1D03B67E005C9A5F /* DiscoverTableViewController.m */,
+				1876098D1D03B8B9005C9A5F /* WMNavigationViewController.h */,
+				1876098E1D03B8B9005C9A5F /* WMNavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1876089A1D0304EE005C9A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1876089B1D0304EE005C9A5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1876089F1D0311ED005C9A5F /* FirstTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				187608A01D0311ED005C9A5F /* Controller */,
+				187608A11D0311ED005C9A5F /* Model */,
+				187608A21D0311ED005C9A5F /* View */,
+			);
+			name = FirstTabBarController;
+			path = Home/FirstTabBarController;
+			sourceTree = "<group>";
+		};
+		187608A01D0311ED005C9A5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				187608B11D031438005C9A5F /* FirstPageTabBarController.h */,
+				187608B21D031438005C9A5F /* FirstPageTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		187608A11D0311ED005C9A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187608A21D0311ED005C9A5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187608A31D0312B7005C9A5F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				187608A41D0312B7005C9A5F /* Controller */,
+				187608A51D0312B7005C9A5F /* Model */,
+				187608A61D0312B7005C9A5F /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		187608A41D0312B7005C9A5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				187608A81D031372005C9A5F /* BaseNavigationViewController.h */,
+				187608A91D031372005C9A5F /* BaseNavigationViewController.m */,
+				187608AE1D0313B3005C9A5F /* BaseViewController.h */,
+				187608AF1D0313B3005C9A5F /* BaseViewController.m */,
+				1876097E1D03AB1A005C9A5F /* BaseTableViewController.h */,
+				1876097F1D03AB1A005C9A5F /* BaseTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		187608A51D0312B7005C9A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187608A61D0312B7005C9A5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187608A71D0312BD005C9A5F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		187608B41D031CD0005C9A5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				187608B51D031CD0005C9A5F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		187608B51D031CD0005C9A5F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				187608D41D031CD0005C9A5F /* Contacts.xcassets */,
+				187608D51D031CD0005C9A5F /* Discover.xcassets */,
+				187608D61D031CD0005C9A5F /* Home.xcassets */,
+				187608D81D031CD0005C9A5F /* Me.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		187609731D03A9B6005C9A5F /* Moment */ = {
+			isa = PBXGroup;
+			children = (
+				1876097A1D03AA1B005C9A5F /* TableViewController */,
+				187609741D03A9B6005C9A5F /* Controller */,
+				187609751D03A9B6005C9A5F /* Model */,
+				187609761D03A9B6005C9A5F /* View */,
+			);
+			path = Moment;
+			sourceTree = "<group>";
+		};
+		187609741D03A9B6005C9A5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		187609751D03A9B6005C9A5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187609901D03CD46005C9A5F /* MomentCellModel.h */,
+				187609911D03CD46005C9A5F /* MomentCellModel.m */,
+				187609991D03CDE9005C9A5F /* MomentCellFavoriteModel.h */,
+				1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */,
+				187609961D03CDC9005C9A5F /* MomentCellCommentModel.h */,
+				187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187609761D03A9B6005C9A5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1876097A1D03AA1B005C9A5F /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				187609841D03B39D005C9A5F /* MomentTableViewController.h */,
+				187609851D03B39D005C9A5F /* MomentTableViewController.m */,
+			);
+			path = TableViewController;
 			sourceTree = "<group>";
 		};
 		3650E3906E9FC11D097FFA97 /* Frameworks */ = {
@@ -270,8 +498,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187609091D031CD0005C9A5F /* Contacts.xcassets in Resources */,
+				187609721D032062005C9A5F /* Images.xcassets in Resources */,
+				1876090D1D031CD0005C9A5F /* Me.xcassets in Resources */,
 				187608741D02F89B005C9A5F /* LaunchScreen.storyboard in Resources */,
+				1876090A1D031CD0005C9A5F /* Discover.xcassets in Resources */,
 				187608711D02F89B005C9A5F /* Assets.xcassets in Resources */,
+				1876090B1D031CD0005C9A5F /* Home.xcassets in Resources */,
 				1876086F1D02F89B005C9A5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +578,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1876086C1D02F89B005C9A5F /* ViewController.m in Sources */,
+				1876098F1D03B8B9005C9A5F /* WMNavigationViewController.m in Sources */,
+				187609801D03AB1A005C9A5F /* BaseTableViewController.m in Sources */,
+				1876098C1D03B67E005C9A5F /* DiscoverTableViewController.m in Sources */,
+				187608AA1D031372005C9A5F /* BaseNavigationViewController.m in Sources */,
+				1876099B1D03CDE9005C9A5F /* MomentCellFavoriteModel.m in Sources */,
+				187609921D03CD46005C9A5F /* MomentCellModel.m in Sources */,
+				187609981D03CDC9005C9A5F /* MomentCellCommentModel.m in Sources */,
 				187608691D02F89B005C9A5F /* AppDelegate.m in Sources */,
+				187608B31D031438005C9A5F /* FirstPageTabBarController.m in Sources */,
 				187608661D02F89B005C9A5F /* main.m in Sources */,
+				187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */,
+				187609861D03B39D005C9A5F /* MomentTableViewController.m in Sources */,
+				1876089E1D030517005C9A5F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +732,10 @@
 			baseConfigurationReference = FAAF12F146E130D784B28EDE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = WeChatMomentsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WeChatMomentsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,7 +747,10 @@
 			baseConfigurationReference = A5BBC0B1E36E6E30CB656E30 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)-Prefix.pch";
 				INFOPLIST_FILE = WeChatMomentsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WeChatMomentsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
