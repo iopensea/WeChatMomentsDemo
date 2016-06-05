@@ -8,46 +8,123 @@
 
 #import "MomentCellModel.h"
 
-const CGFloat contentLabelFontSize = 15;
-CGFloat maxContentLabelHeight = 0;
+//MomentSenderModel
+//MomentUserInfoModel
+//MomentTweetModel
+//MomentImageModel
+//MomentCellCommentModel
+//MomentSenderModel
 
-@implementation MomentCellModel {
-    CGFloat _lastContentWidth;
+@interface MomentCellModel()
+
+
+@end
+
+@implementation MomentCellModel
+
+- (instancetype) initWithUserInfoModel:(MomentUserInfoModel *)model andTweetArr:(NSArray *)tweetArr
+{
+    if (!self) {
+        self = [super init];
+    }
+    self.userInfoModel = model;
+    self.tweet = tweetArr;
+
+    return self;
 }
 
-@synthesize contentMessages = _contentMessages;
+@end
 
-- (void)setcontentMessages:(NSString *)contentMessages
+
+@implementation MomentUserInfoModel
+
+- (instancetype) initWithProfileImageUrl:(NSString *)profileImageUrl andSenderModel:(MomentSenderModel *)senderModel
 {
-    _contentMessages = contentMessages;
+    if (!self) {
+        self = [super init];
+    }
+    self.profileImgUrl = profileImageUrl;
+    self.senderModel = senderModel;
+
+    return self;
 }
 
-- (NSString *)contentMessages
+
+@end
+
+@implementation MomentTweetModel
+
+- (instancetype) initWithContent:(NSString *)content andSenderModel:(MomentSenderModel *)senderModel andImageArr:(NSArray *)imgsArr andCommentsArr:(NSArray *)commentsArr
 {
-    CGFloat contentW = [UIScreen mainScreen].bounds.size.width - 70;
-    if (contentW != _lastContentWidth) {
-        _lastContentWidth = contentW;
-        CGRect textRect = [_contentMessages boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:contentLabelFontSize]} context:nil];
-        if (textRect.size.height > maxContentLabelHeight) {
-            _shouldShowMoreButton = YES;
-        } else {
-            _shouldShowMoreButton = NO;
-        }
+    if (!self) {
+        self = [super init];
     }
     
-    return _contentMessages;
+    self.content = content;
+    self.senderModel = senderModel;
+    self.imagesArr = imgsArr;
+    self.commentsArr = commentsArr;
+
+    return self;
 }
 
-- (void)setIsOpening:(BOOL)isOpening
+@end
+
+@implementation MomentImageModel
+
+- (instancetype) initWithImageUrl:(NSString *)imageUrl
 {
-    if (!_shouldShowMoreButton) {
-        _isOpening = NO;
-    } else {
-        _isOpening = isOpening;
+    if (!self) {
+        self = [super init];
     }
+    self.imageUrl = imageUrl;
+    
+    return self;
 }
 
+@end
 
+@implementation MomentCellCommentModel
 
+- (instancetype) initWithcontentModel:(NSString *)content andSenderModel:(MomentSenderModel *)senderModel
+{
+    if (!self) {
+        self = [super init];
+    }
+    self.content = content;
+    self.senderModel = senderModel;
+    
+    return self;
+}
+
+@end
+
+@implementation MomentCellContentModel
+
+- (instancetype) initWithContent:(NSString *)content
+{
+    if (!self) {
+        self = [super init];
+    }
+    self.content = content;
+
+    return self;
+}
+
+@end
+
+@implementation MomentSenderModel
+
+- (instancetype) initWithUserName:(NSString *)userName andNick:(NSString *)nick andAvatarUrl:(NSString *)avatarUrl
+{
+    if (!self) {
+        self = [super init];
+    }
+    self.username = userName;
+    self.nick = nick;
+    self.avatarUrl = avatarUrl;
+
+    return self;
+}
 
 @end

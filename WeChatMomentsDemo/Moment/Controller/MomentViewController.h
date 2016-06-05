@@ -1,13 +1,13 @@
 //
-//  MomentCellCommentModel.m
+//  MomentViewController.h
 //  WeChatMomentsDemo
 //
 //  Created by apple on 16/6/5.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "MomentCellCommentModel.h"
+#import "BaseViewController.h"
 
-@implementation MomentCellCommentModel
+@interface MomentViewController : BaseViewController
 
 @end

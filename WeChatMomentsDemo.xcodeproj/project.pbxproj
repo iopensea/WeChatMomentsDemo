@@ -23,9 +23,9 @@
 		1876098C1D03B67E005C9A5F /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876098B1D03B67E005C9A5F /* DiscoverTableViewController.m */; };
 		1876098F1D03B8B9005C9A5F /* WMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876098E1D03B8B9005C9A5F /* WMNavigationViewController.m */; };
 		187609921D03CD46005C9A5F /* MomentCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609911D03CD46005C9A5F /* MomentCellModel.m */; };
-		187609981D03CDC9005C9A5F /* MomentCellCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */; };
-		1876099B1D03CDE9005C9A5F /* MomentCellFavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */; };
 		1876099E1D03D646005C9A5F /* Moment.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1876099D1D03D646005C9A5F /* Moment.xcassets */; };
+		187609A11D03D82C005C9A5F /* MomentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609A01D03D82C005C9A5F /* MomentCell.m */; };
+		187609A41D03EABF005C9A5F /* MomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187609A31D03EABF005C9A5F /* MomentViewController.m */; };
 		1E21438967FA7C2B295DC828 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4C78B6EA97342D49C7173E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -81,11 +81,11 @@
 		1876098E1D03B8B9005C9A5F /* WMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNavigationViewController.m; sourceTree = "<group>"; };
 		187609901D03CD46005C9A5F /* MomentCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellModel.h; sourceTree = "<group>"; };
 		187609911D03CD46005C9A5F /* MomentCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellModel.m; sourceTree = "<group>"; };
-		187609961D03CDC9005C9A5F /* MomentCellCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellCommentModel.h; sourceTree = "<group>"; };
-		187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellCommentModel.m; sourceTree = "<group>"; };
-		187609991D03CDE9005C9A5F /* MomentCellFavoriteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCellFavoriteModel.h; sourceTree = "<group>"; };
-		1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCellFavoriteModel.m; sourceTree = "<group>"; };
 		1876099D1D03D646005C9A5F /* Moment.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Moment.xcassets; sourceTree = "<group>"; };
+		1876099F1D03D82C005C9A5F /* MomentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentCell.h; sourceTree = "<group>"; };
+		187609A01D03D82C005C9A5F /* MomentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentCell.m; sourceTree = "<group>"; };
+		187609A21D03EABF005C9A5F /* MomentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentViewController.h; sourceTree = "<group>"; };
+		187609A31D03EABF005C9A5F /* MomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentViewController.m; sourceTree = "<group>"; };
 		A5BBC0B1E36E6E30CB656E30 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FAAF12F146E130D784B28EDE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,8 +305,8 @@
 			children = (
 				1876097A1D03AA1B005C9A5F /* TableViewController */,
 				187609741D03A9B6005C9A5F /* Controller */,
-				187609751D03A9B6005C9A5F /* Model */,
 				187609761D03A9B6005C9A5F /* View */,
+				187609751D03A9B6005C9A5F /* Model */,
 			);
 			path = Moment;
 			sourceTree = "<group>";
@@ -314,6 +314,8 @@
 		187609741D03A9B6005C9A5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				187609A21D03EABF005C9A5F /* MomentViewController.h */,
+				187609A31D03EABF005C9A5F /* MomentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,10 +325,6 @@
 			children = (
 				187609901D03CD46005C9A5F /* MomentCellModel.h */,
 				187609911D03CD46005C9A5F /* MomentCellModel.m */,
-				187609991D03CDE9005C9A5F /* MomentCellFavoriteModel.h */,
-				1876099A1D03CDE9005C9A5F /* MomentCellFavoriteModel.m */,
-				187609961D03CDC9005C9A5F /* MomentCellCommentModel.h */,
-				187609971D03CDC9005C9A5F /* MomentCellCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +332,8 @@
 		187609761D03A9B6005C9A5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1876099F1D03D82C005C9A5F /* MomentCell.h */,
+				187609A01D03D82C005C9A5F /* MomentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -558,15 +558,15 @@
 				187609801D03AB1A005C9A5F /* BaseTableViewController.m in Sources */,
 				1876098C1D03B67E005C9A5F /* DiscoverTableViewController.m in Sources */,
 				187608AA1D031372005C9A5F /* BaseNavigationViewController.m in Sources */,
-				1876099B1D03CDE9005C9A5F /* MomentCellFavoriteModel.m in Sources */,
 				187609921D03CD46005C9A5F /* MomentCellModel.m in Sources */,
-				187609981D03CDC9005C9A5F /* MomentCellCommentModel.m in Sources */,
+				187609A41D03EABF005C9A5F /* MomentViewController.m in Sources */,
 				187608691D02F89B005C9A5F /* AppDelegate.m in Sources */,
 				187608B31D031438005C9A5F /* FirstPageTabBarController.m in Sources */,
 				187608661D02F89B005C9A5F /* main.m in Sources */,
 				187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */,
 				187609861D03B39D005C9A5F /* MomentTableViewController.m in Sources */,
 				1876089E1D030517005C9A5F /* HomeViewController.m in Sources */,
+				187609A11D03D82C005C9A5F /* MomentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "DiscoverTableViewController.h"
-#import "MomentTableViewController.h"
+#import "MomentViewController.h"
 
 #import <Masonry.h>
 
@@ -106,7 +106,7 @@
         case 0:
         {
             //MomentTableViewController
-            MomentTableViewController *momentVc = [[MomentTableViewController alloc]init];
+            MomentViewController *momentVc = [[MomentViewController alloc]init];
             [self.navigationController pushViewController:momentVc animated:YES];
         }
             break;
