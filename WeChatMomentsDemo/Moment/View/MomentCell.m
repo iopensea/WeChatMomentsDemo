@@ -66,7 +66,7 @@
     self.userName.text = _model.userInfoModel.senderModel.username;
     self.iconImageView.image = [UIImage imageNamed:_model.userInfoModel.senderModel.avatarUrl];
 
-    //layout
+    //there need autolayout
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.left).offset(10);
         make.centerY.equalTo(self.contentView.centerY);
@@ -77,6 +77,8 @@
         make.left.equalTo(self.iconImageView.right).offset(10);
         make.centerY.equalTo(self.contentView.centerY);
     }];
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
