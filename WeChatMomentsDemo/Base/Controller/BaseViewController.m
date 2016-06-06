@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

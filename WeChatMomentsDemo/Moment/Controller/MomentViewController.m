@@ -24,10 +24,7 @@
 @property (nonatomic,strong) NSMutableArray * dataMutableArr;
 @property (nonatomic,strong) UIImage *images;
 
-//刷新控件
 @property(nonatomic,strong)UIImageView * refreshView;
-@property(nonatomic,assign)BOOL isRefrsh;
-@property(nonatomic,assign)BOOL isRevolve;
 
 //test
 @property (nonatomic, strong) NSMutableArray *labelTextArray;
@@ -39,22 +36,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initTableView];
+    //load data - debug, should load url data from Jason
     [self loadData];
-
 }
 
 - (void)loadData {
-    _isRevolve = NO;
-    _isRefrsh = NO;
     _dataMutableArr = [[NSMutableArray alloc]init];
-    
-    for (int i = 0; i < 100; i++)
-    {
+    for (int i = 0; i < 100; i++) {
         [_dataMutableArr addObject:[NSString stringWithFormat:@"%d",i]];
     }
-    
-    [self initTableView];
 }
 
 - (void)initTableView {

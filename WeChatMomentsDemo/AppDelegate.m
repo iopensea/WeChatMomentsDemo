@@ -18,14 +18,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    UINavigationBar *naviBar = [UINavigationBar appearance];
-    UIApplication *shareApp = [UIApplication sharedApplication];
-    shareApp.statusBarStyle = UIStatusBarStyleLightContent;
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+//    UINavigationBar *naviBar = [UINavigationBar appearance];
+//    UIApplication *shareApp = [UIApplication sharedApplication];
+//    shareApp.statusBarStyle = UIStatusBarStyleLightContent;
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
-    naviBar.tintColor = [UIColor whiteColor];
-    naviBar.barTintColor = kWMColor(0.1, 0.1, 0.1, 0.9);
-    naviBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+     [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+     [UINavigationBar appearance].barTintColor = kWMColor(0.1, 0.1, 0.1, 1.0);
+     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

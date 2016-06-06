@@ -17,11 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //set background color or image here
-    [self.navigationBar setBackgroundColor:[UIColor cyanColor]];
-
     self.interactivePopGestureRecognizer.delegate = nil;
-    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {

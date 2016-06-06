@@ -11,6 +11,8 @@
 
 #import <Masonry.h>
 
+#define kCellHeight 50.0f;
+
 @interface DiscoverTableViewController () <UINavigationControllerDelegate>
 
 @end
@@ -25,11 +27,21 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.tableView.tableFooterView = [UIView new];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.delegate = self;
+    
+    self.tableView.tableFooterView = [UIView new];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -120,7 +132,7 @@
     CGFloat heightOfRow;
     switch (indexPath.section) {
         case 0:
-            heightOfRow = 50.0;
+            heightOfRow = kCellHeight;
             break;
         default:
             heightOfRow = 0;

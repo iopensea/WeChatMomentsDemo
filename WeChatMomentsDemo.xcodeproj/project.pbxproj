@@ -14,7 +14,6 @@
 		187608741D02F89B005C9A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187608721D02F89B005C9A5F /* LaunchScreen.storyboard */; };
 		1876087F1D02F89C005C9A5F /* WeChatMomentsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876087E1D02F89C005C9A5F /* WeChatMomentsDemoTests.m */; };
 		1876088A1D02F89C005C9A5F /* WeChatMomentsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608891D02F89C005C9A5F /* WeChatMomentsDemoUITests.m */; };
-		1876089E1D030517005C9A5F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876089D1D030517005C9A5F /* HomeViewController.m */; };
 		187608AA1D031372005C9A5F /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608A91D031372005C9A5F /* BaseNavigationViewController.m */; };
 		187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608AF1D0313B3005C9A5F /* BaseViewController.m */; };
 		187608B31D031438005C9A5F /* FirstPageTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187608B21D031438005C9A5F /* FirstPageTabBarController.m */; };
@@ -63,8 +62,6 @@
 		187608891D02F89C005C9A5F /* WeChatMomentsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatMomentsDemoUITests.m; sourceTree = "<group>"; };
 		1876088B1D02F89C005C9A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187608971D030341005C9A5F /* WeChatMomentsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeChatMomentsDemo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		1876089C1D030517005C9A5F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		1876089D1D030517005C9A5F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		187608A81D031372005C9A5F /* BaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationViewController.h; sourceTree = "<group>"; };
 		187608A91D031372005C9A5F /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		187608AE1D0313B3005C9A5F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -198,8 +195,6 @@
 		187608991D0304EE005C9A5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1876089C1D030517005C9A5F /* HomeViewController.h */,
-				1876089D1D030517005C9A5F /* HomeViewController.m */,
 				1876098A1D03B67E005C9A5F /* DiscoverTableViewController.h */,
 				1876098B1D03B67E005C9A5F /* DiscoverTableViewController.m */,
 				1876098D1D03B8B9005C9A5F /* WMNavigationViewController.h */,
@@ -565,7 +560,6 @@
 				187608661D02F89B005C9A5F /* main.m in Sources */,
 				187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */,
 				187609861D03B39D005C9A5F /* MomentTableViewController.m in Sources */,
-				1876089E1D030517005C9A5F /* HomeViewController.m in Sources */,
 				187609A11D03D82C005C9A5F /* MomentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
