@@ -17,10 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-//    UINavigationBar *naviBar = [UINavigationBar appearance];
-//    UIApplication *shareApp = [UIApplication sharedApplication];
-//    shareApp.statusBarStyle = UIStatusBarStyleLightContent;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
