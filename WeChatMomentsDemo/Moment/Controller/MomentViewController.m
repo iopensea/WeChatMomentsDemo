@@ -6,13 +6,17 @@
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
+#import <Masonry.h>
+#import "YiRefreshFooter.h"
+
 #import "MomentViewController.h"
 #import "MomentCell.h"
-#import "MomentCellModel.h"
+#import "MomentHeaderCell.h"
+#import "WMMoment.h"
 
 #define kScreenWitdh [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
-#define kCellHeight 70.0f
+#define kCellHeight 180.0
 #define kNavigationBarHeight 64.0f
 
 #define vLabelTitles @[@"1- one",@"2- two",@"3- three",@"4- four",@"5- five"]
@@ -24,7 +28,12 @@
 @property (nonatomic,strong) NSMutableArray * dataMutableArr;
 @property (nonatomic,strong) UIImage *images;
 
-@property(nonatomic,strong)UIImageView * refreshView;
+@property(nonatomic,strong) UIImageView * refreshView;
+
+//
+@property (nonatomic, strong) NSMutableArray *topics;
+@property (nonatomic, assign) NSInteger topicIndex;
+@property (nonatomic, strong) YiRefreshFooter *refreshFooter;
 
 //test
 @property (nonatomic, strong) NSMutableArray *labelTextArray;
@@ -32,65 +41,120 @@
 
 @end
 
+
+static NSString *UserOfexpertID = @"User";
+static NSString *TweetOfexpertID = @"Tweet";
+
 @implementation MomentViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initTableView];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.topicIndex = 0;
+    [self loadDataWithCache:YES];
+    
+    WeakSelf(self);
+    YiRefreshFooter *refresh = [[YiRefreshFooter alloc] init];
+    refresh.scrollView = self.tableView;
+    [refresh footer];
+    refresh.beginRefreshingBlock = ^(){
+        [weakSelf loadDataWithCache:NO];
+    };
+    _refreshFooter = refresh;
+    
     //load data - debug, should load url data from Jason
-    [self loadData];
+//    [self loadData];
+
 }
 
-- (void)loadData {
-    _dataMutableArr = [[NSMutableArray alloc]init];
-    for (int i = 0; i < 100; i++) {
-        [_dataMutableArr addObject:[NSString stringWithFormat:@"%d",i]];
-    }
+- (void)loadDataWithCache:(BOOL)cache{
+    
+    WeakSelf(self);
+    
+    [WMMoment userInfoWithIndex:self.topicIndex isCache:cache expertID:UserOfexpertID getDataSuccess:^(NSArray *dataArr) {
+        if (dataArr.count == 0) {
+            NSLog(@"没有更多数据");
+            return ;
+        }
+        
+        if(weakSelf.topicIndex == 0) [weakSelf.topics removeAllObjects];
+        
+        [weakSelf.topics addObjectsFromArray:dataArr];
+        
+        [weakSelf.tableView reloadData];
+        
+        if(dataArr.count>0) weakSelf.topicIndex += 10;
+    } getDataFailure:^(NSError *error) {
+        NSLog(@"%@",error);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.refreshFooter endRefreshing];
+        });
+    }];
 }
 
 - (void)initTableView {
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWitdh, kScreenHeight) style:UITableViewStylePlain];
     _tableView.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
     [self.view addSubview:_tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"count=%ld",_dataMutableArr.count);
-    return _dataMutableArr.count;
+    return self.topics.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat cellHeight = 0.0;
+    
+    if (indexPath.section == 0) {
+        cellHeight = kCellHeight;
+    } else {
+        cellHeight = kCellHeight * 2;
+    }
+    
     return kCellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *kMomentCellReuseId = @"MomentTableViewCell";
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    [tableView registerClass:[MomentCell class] forCellReuseIdentifier:kMomentCellReuseId];
-    MomentCell *cell = [tableView dequeueReusableCellWithIdentifier:kMomentCellReuseId forIndexPath:indexPath];
+    if (indexPath.section == 0) {
 
-    //debug - load model
-    MomentCellModel *model = [[MomentCellModel alloc]init];
-    MomentSenderModel *sender = [[MomentSenderModel alloc]initWithUserName:@"sender" andNick:@"nick" andAvatarUrl:@"tabbar_contactsHL"];
-    MomentImageModel *img = [[MomentImageModel alloc]initWithImageUrl:@"tabbar_discover"];
-    MomentCellCommentModel *comment = [[MomentCellCommentModel alloc]initWithcontentModel:@"comment" andSenderModel:sender];
-    MomentTweetModel *tweetModel = [[MomentTweetModel alloc]initWithContent:@"tweet" andSenderModel:sender andImageArr:@[img] andCommentsArr:@[comment]];
-
-//    UIImage *image = [UIImage imageNamed:@"tabbar_discover"];
-    
-    model.userInfoModel = [[MomentUserInfoModel alloc]init];
-    model.userInfoModel.profileImgUrl = @"tabbar_contacts";
-    model.userInfoModel.senderModel = [[MomentSenderModel alloc]initWithUserName:@"UserName" andNick:@"Nick" andAvatarUrl:@"tabbar_me"];
-    model.tweet = @[tweetModel];
-    [cell setModel:model];
-    
-
-    
-    return cell;
+        //测试代码
+        //debug - header cell layout
+        MomentHeaderCell *cell = [MomentHeaderCell momentHeaderCellWithTableView:tableView];
+        cell.wmUser = self.topics[indexPath.row];
+        return cell;
+    } else {
+        //测试代码
+        //debug - header cell layout
+        MomentCell *cell = [MomentCell momentCellWithTableView:tableView];
+        cell.wmUser = self.topics[indexPath.row];
+        return cell;
+    }
 }
+
+- (NSMutableArray *)topics{
+    
+    if (!_topics) {
+        _topics = [NSMutableArray arrayWithArray:[WMMoment cacheWithExpertID:UserOfexpertID]]? :[NSMutableArray array];
+    }
+    return _topics;
+}
+
+
+
+#pragma mark - image cache
 
 /**
  * imageCachePath: @"imageCache"
@@ -153,6 +217,15 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - test for debug
+//test - for debug
+- (void)loadData {
+    _dataMutableArr = [[NSMutableArray alloc]init];
+    for (int i = 0; i < 100; i++) {
+        [_dataMutableArr addObject:[NSString stringWithFormat:@"%d",i]];
+    }
 }
 
 @end
