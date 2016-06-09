@@ -31,8 +31,6 @@
 
 + (void) tweetWithIndex:(NSInteger)index isCache:(BOOL)cache expertID:(NSString *)ID getDataSuccess:(GetDataSuccessBlock)success getDataFailure:(GetDataFailureBlock)failure;
 
-+ (instancetype) momentWithDict:(NSDictionary *)dict;
-
 + (NSArray *)cacheWithExpertID:(NSString *)ID;
 + (NSArray *)cacheUser;
 

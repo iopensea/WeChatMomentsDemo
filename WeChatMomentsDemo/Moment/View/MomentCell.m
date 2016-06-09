@@ -11,14 +11,26 @@
 
 #import "MomentCell.h"
 #import "WMImageView.h"
-#import "WMUser.h"
+
 #import "WMTweet.h"
+#import "WMImage.h"
+#import "WMSender.h"
+#import "WMComment.h"
+
 
 @interface MomentCell ()
 
-@property (nonatomic, strong) WMImageView *profileImageView;
-@property (nonatomic, strong) WMImageView *avatarImageView;
-@property (nonatomic, strong) UILabel *nickLabel;
+//Content
+@property (nonatomic, strong) UITextView *contentTextView;
+//Images
+@property (nonatomic, strong) WMImageView *imagesView;
+//Sender
+@property (nonatomic, strong) WMImageView *senderAvatarImageView;
+@property (nonatomic, strong) UILabel *senderNickLabel;
+//Comments
+@property (nonatomic, strong) UITextView *postContentTextView;
+@property (nonatomic, strong) WMImageView *postSenderNickLabel;
+@property (nonatomic, strong) WMImageView *postAvatarImageView;
 
 @end
 
@@ -26,15 +38,13 @@ static NSString *wmMomentCell = @"wmMomentCell";
 
 @implementation MomentCell
 
-- (void) setWmUser:(WMUser *)wmUser {
-    _wmUser = wmUser;
+- (void) setWmSender:(WMSender *)wmSender {
+    _wmSender = wmSender;
     
-    self.profileImageView.contentMode = UIViewContentModeCenter;
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:_wmUser.profileimage] placeholderImage:[UIImage imageNamed:@"tabbar_me"]];
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:_wmUser.avatar]];
-    
-    self.nickLabel.text = _wmUser.nick;
-    self.nickLabel.textAlignment = NSTextAlignmentRight;
+    [self.senderAvatarImageView sd_setImageWithURL:[NSURL URLWithString:_wmSender.avatar]];
+    self.senderNickLabel.text = _wmSender.nick;
+    self.senderNickLabel.textAlignment = NSTextAlignmentRight;
+
 }
 
 - (void) setWmImage:(WMImage *)wmImage {
@@ -54,8 +64,8 @@ static NSString *wmMomentCell = @"wmMomentCell";
     [tableView registerClass:[MomentCell class] forCellReuseIdentifier:wmMomentCell];
     MomentCell *cell = [tableView dequeueReusableCellWithIdentifier:wmMomentCell forIndexPath:indexPath];
 
-    cell.avatarImageView.layer.cornerRadius = 5;
-    cell.avatarImageView.layer.masksToBounds = YES;
+    cell.senderAvatarImageView.layer.cornerRadius = 5;
+    cell.senderAvatarImageView.layer.masksToBounds = YES;
     
     return cell;
 }
@@ -69,8 +79,8 @@ static NSString *wmMomentCell = @"wmMomentCell";
         cell = [[MomentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:wmMomentCell];
     }
 
-    cell.avatarImageView.layer.cornerRadius = 5;
-    cell.avatarImageView.layer.masksToBounds = YES;
+    cell.senderAvatarImageView.layer.cornerRadius = 5;
+    cell.senderAvatarImageView.layer.masksToBounds = YES;
     
     return cell;
 }
@@ -110,38 +120,27 @@ static NSString *wmMomentCell = @"wmMomentCell";
 
 - (void) setup {
     
-    self.nickLabel = [[UILabel alloc]init];
-    self.avatarImageView = [[WMImageView alloc]init];
-    self.profileImageView = [[WMImageView alloc]init];
-
-    [self.contentView addSubview:self.profileImageView];
-    [self.contentView addSubview:self.nickLabel];
-    [self.contentView addSubview:self.avatarImageView];
+    self.senderNickLabel = [[UILabel alloc]init];
+    self.senderAvatarImageView = [[WMImageView alloc]init];
+    
+    [self.contentView addSubview:self.senderNickLabel];
+    [self.contentView addSubview:self.senderAvatarImageView];
 
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    //user profile
-    [self.profileImageView makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentView.left);
-        make.right.equalTo(self.contentView.right);
-        make.top.equalTo(self.contentView.top);
-        make.bottom.equalTo(self.contentView.bottom);
-        
-    }];
-    
-    [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.senderAvatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView.right).offset(-10);
         make.width.and.height.equalTo(50);
         make.bottom.equalTo(self.contentView.bottom).offset(-10);
     }];
     
-    [self.nickLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.senderNickLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.left).offset(10);
-        make.right.equalTo(self.avatarImageView.left).offset(-10);
-        make.top.equalTo(self.avatarImageView.top);
+        make.right.equalTo(self.senderAvatarImageView.left).offset(-10);
+        make.top.equalTo(self.senderAvatarImageView.top);
     }];
     
 }

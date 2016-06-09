@@ -19,8 +19,8 @@
     // value should be Class or Class name.
     return @{
              @"images" : [WMImage class],
-             @"comments" : [WMComment class],
-             @"senders" : @"sender"
+             @"comments" : [WMComment class]
+//             ,@"senders" : @"sender"
              };
 
 //    return @{
@@ -121,13 +121,6 @@ static NSString * tweetPath = @"user/jsmith/tweets";
                      failure:^(NSURLSessionDataTask *task, NSError *error) {
                          failure(error);
                      }];
-}
-
-+ (instancetype)momentWithDict:(NSDictionary *)dict {
-    id obj = [[self alloc] init];
-    [obj setValuesForKeysWithDictionary:dict];
-    
-    return obj;
 }
 
 + (NSArray *)cacheWithExpertID:(NSString *)ID{
