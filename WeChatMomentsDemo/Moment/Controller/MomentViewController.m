@@ -13,6 +13,10 @@
 #import "MomentCell.h"
 #import "MomentHeaderCell.h"
 #import "WMTweet.h"
+#import "WMUser.h"
+//#import "WMImage.h"
+//#import "WMSender.h"
+//#import "WMComment.h"
 
 #define kScreenWitdh [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -56,6 +60,7 @@ static NSString *TweetOfexpertID = @"Tweet";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.userInfoIndex = 0;
+    self.tweetIndex = 0;
     [self loadUserInfoDataWithCache:YES];
     
     WeakSelf(self);
@@ -128,7 +133,7 @@ static NSString *TweetOfexpertID = @"Tweet";
     if (section == 0) {
         return self.users.count;
     } else {
-        return self.users.count;;
+        return self.tweets.count;;
     }
 
 }
@@ -165,7 +170,7 @@ static NSString *TweetOfexpertID = @"Tweet";
         //测试代码
         //debug - header cell layout
         MomentCell *cell = [MomentCell momentCellWithTableView:tableView forIndexPath:indexPath];
-        cell.wmUser = self.users[indexPath.row];
+        cell.wmTweet = self.tweets[indexPath.row];
         return cell;
     }
 }
@@ -178,6 +183,13 @@ static NSString *TweetOfexpertID = @"Tweet";
     return _users;
 }
 
+- (NSMutableArray *)tweets{
+    
+    if (!_tweets) {
+        _tweets = [NSMutableArray arrayWithArray:[WMTweet cacheWithExpertID:TweetOfexpertID]]? :[NSMutableArray array];
+    }
+    return _tweets;
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -41,12 +41,12 @@ static NSString *wmMomentCell = @"wmMomentCell";
     _wmImage = wmImage;
 }
 
-- (void) setWmTweet:(WMTweet *)wmTweet {
-    _wmTweet = wmTweet;
-}
-
 - (void)setWmComment:(WMComment *)wmComment {
     _wmComment = wmComment;
+}
+
+- (void) setWmTweet:(WMTweet *)wmTweet {
+    _wmTweet = wmTweet;
 }
 
 + (instancetype) momentCellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath {

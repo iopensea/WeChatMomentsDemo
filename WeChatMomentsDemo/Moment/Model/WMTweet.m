@@ -100,8 +100,9 @@ static NSString * tweetPath = @"user/jsmith/tweets";
                      success:^(NSURLSessionDataTask *task, id responseObject) {
                          
                          NSArray *dictArr = responseObject;
-                         NSLog(@"[responseObject]=%@",dictArr);
+//                         NSLog(@"[responseObject]=%@",dictArr);
                          NSLog(@"tweet responseObject=%@",responseObject);
+                         NSLog(@"dictArr.count=%ld",dictArr.count);
                          NSMutableArray *arrMutableMoment = [NSMutableArray arrayWithCapacity:dictArr.count];
                          
                          for (NSDictionary *dict in dictArr) {
