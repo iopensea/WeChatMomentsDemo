@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186B02BD1D0923B700E542B4 /* WMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B02BC1D0923B700E542B4 /* WMImage.m */; };
+		186B02C01D0923C900E542B4 /* WMSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B02BF1D0923C900E542B4 /* WMSender.m */; };
+		186B02C31D0923D700E542B4 /* WMComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B02C21D0923D700E542B4 /* WMComment.m */; };
+		186B02C61D0923F000E542B4 /* WMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B02C51D0923F000E542B4 /* WMUser.m */; };
 		186F28F51D07E58E00AE4428 /* WMAFNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F28F41D07E58E00AE4428 /* WMAFNetworkTool.m */; };
 		186F29001D07ED9F00AE4428 /* WMCoderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F28FF1D07ED9F00AE4428 /* WMCoderObject.m */; };
-		186F29031D07EE2700AE4428 /* WMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F29021D07EE2700AE4428 /* WMUser.m */; };
 		186F29061D07EFB300AE4428 /* WMTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F29051D07EFB300AE4428 /* WMTweet.m */; };
-		186F29091D07F62B00AE4428 /* WMComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F29081D07F62B00AE4428 /* WMComment.m */; };
-		186F290C1D07FD2400AE4428 /* WMMoment.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F290B1D07FD2400AE4428 /* WMMoment.m */; };
 		186F290F1D0809B100AE4428 /* WMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F290E1D0809B100AE4428 /* WMImageView.m */; };
 		186F29161D08164B00AE4428 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F29111D08164B00AE4428 /* down@2x.png */; };
 		186F29171D08164B00AE4428 /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F29131D08164B00AE4428 /* YiRefreshFooter.m */; };
@@ -58,18 +59,20 @@
 
 /* Begin PBXFileReference section */
 		0F4C78B6EA97342D49C7173E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		186B02BB1D0923B700E542B4 /* WMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMImage.h; sourceTree = "<group>"; };
+		186B02BC1D0923B700E542B4 /* WMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMImage.m; sourceTree = "<group>"; };
+		186B02BE1D0923C900E542B4 /* WMSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSender.h; sourceTree = "<group>"; };
+		186B02BF1D0923C900E542B4 /* WMSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSender.m; sourceTree = "<group>"; };
+		186B02C11D0923D700E542B4 /* WMComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMComment.h; sourceTree = "<group>"; };
+		186B02C21D0923D700E542B4 /* WMComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMComment.m; sourceTree = "<group>"; };
+		186B02C41D0923F000E542B4 /* WMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMUser.h; sourceTree = "<group>"; };
+		186B02C51D0923F000E542B4 /* WMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMUser.m; sourceTree = "<group>"; };
 		186F28F31D07E58E00AE4428 /* WMAFNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMAFNetworkTool.h; sourceTree = "<group>"; };
 		186F28F41D07E58E00AE4428 /* WMAFNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMAFNetworkTool.m; sourceTree = "<group>"; };
 		186F28FE1D07ED9F00AE4428 /* WMCoderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCoderObject.h; sourceTree = "<group>"; };
 		186F28FF1D07ED9F00AE4428 /* WMCoderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCoderObject.m; sourceTree = "<group>"; };
-		186F29011D07EE2700AE4428 /* WMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMUser.h; sourceTree = "<group>"; };
-		186F29021D07EE2700AE4428 /* WMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMUser.m; sourceTree = "<group>"; };
 		186F29041D07EFB300AE4428 /* WMTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTweet.h; sourceTree = "<group>"; };
 		186F29051D07EFB300AE4428 /* WMTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTweet.m; sourceTree = "<group>"; };
-		186F29071D07F62B00AE4428 /* WMComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMComment.h; sourceTree = "<group>"; };
-		186F29081D07F62B00AE4428 /* WMComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMComment.m; sourceTree = "<group>"; };
-		186F290A1D07FD2400AE4428 /* WMMoment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMoment.h; sourceTree = "<group>"; };
-		186F290B1D07FD2400AE4428 /* WMMoment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMoment.m; sourceTree = "<group>"; };
 		186F290D1D0809B100AE4428 /* WMImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMImageView.h; sourceTree = "<group>"; };
 		186F290E1D0809B100AE4428 /* WMImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMImageView.m; sourceTree = "<group>"; };
 		186F29111D08164B00AE4428 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
@@ -407,14 +410,16 @@
 		187609751D03A9B6005C9A5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				186F29011D07EE2700AE4428 /* WMUser.h */,
-				186F29021D07EE2700AE4428 /* WMUser.m */,
+				186B02C41D0923F000E542B4 /* WMUser.h */,
+				186B02C51D0923F000E542B4 /* WMUser.m */,
+				186B02BB1D0923B700E542B4 /* WMImage.h */,
+				186B02BC1D0923B700E542B4 /* WMImage.m */,
+				186B02C11D0923D700E542B4 /* WMComment.h */,
+				186B02C21D0923D700E542B4 /* WMComment.m */,
+				186B02BE1D0923C900E542B4 /* WMSender.h */,
+				186B02BF1D0923C900E542B4 /* WMSender.m */,
 				186F29041D07EFB300AE4428 /* WMTweet.h */,
 				186F29051D07EFB300AE4428 /* WMTweet.m */,
-				186F29071D07F62B00AE4428 /* WMComment.h */,
-				186F29081D07F62B00AE4428 /* WMComment.m */,
-				186F290A1D07FD2400AE4428 /* WMMoment.h */,
-				186F290B1D07FD2400AE4428 /* WMMoment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -651,7 +656,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186B02BD1D0923B700E542B4 /* WMImage.m in Sources */,
 				1876098F1D03B8B9005C9A5F /* WMNavigationViewController.m in Sources */,
+				186B02C01D0923C900E542B4 /* WMSender.m in Sources */,
 				187609801D03AB1A005C9A5F /* BaseTableViewController.m in Sources */,
 				186F29171D08164B00AE4428 /* YiRefreshFooter.m in Sources */,
 				186F29061D07EFB300AE4428 /* WMTweet.m in Sources */,
@@ -664,14 +671,13 @@
 				186F29181D08164B00AE4428 /* YiRefreshHeader.m in Sources */,
 				187608691D02F89B005C9A5F /* AppDelegate.m in Sources */,
 				187608B31D031438005C9A5F /* FirstPageTabBarController.m in Sources */,
-				186F29091D07F62B00AE4428 /* WMComment.m in Sources */,
 				187608661D02F89B005C9A5F /* main.m in Sources */,
 				187608B01D0313B3005C9A5F /* BaseViewController.m in Sources */,
 				186F290F1D0809B100AE4428 /* WMImageView.m in Sources */,
-				186F290C1D07FD2400AE4428 /* WMMoment.m in Sources */,
 				187609861D03B39D005C9A5F /* MomentTableViewController.m in Sources */,
 				187609A11D03D82C005C9A5F /* MomentCell.m in Sources */,
-				186F29031D07EE2700AE4428 /* WMUser.m in Sources */,
+				186B02C31D0923D700E542B4 /* WMComment.m in Sources */,
+				186B02C61D0923F000E542B4 /* WMUser.m in Sources */,
 				186F28F51D07E58E00AE4428 /* WMAFNetworkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,6 +825,29 @@
 				INFOPLIST_FILE = WeChatMomentsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WeChatMomentsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -834,6 +863,29 @@
 				INFOPLIST_FILE = WeChatMomentsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wang.WeChatMomentsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

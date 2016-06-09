@@ -2,19 +2,18 @@
 //  WMComment.h
 //  WeChatMomentsDemo
 //
-//  Created by apple on 16/6/8.
+//  Created by apple on 16/6/9.
 //  Copyright © 2016年 apple. All rights reserved.
 //
+
+#import <Foundation/Foundation.h>
+@class WMSender;
 
 @interface WMComment : NSObject
 
 @property (nonatomic, copy) NSString *content;
 
-@property (nonatomic, copy) NSString *userName;
-
-@property (nonatomic, copy) NSString *nick;
-
-@property (nonatomic, copy) NSString *avater;
+@property (nonatomic, strong) WMSender *sender;
 
 + (instancetype) commentWithDict:(NSDictionary *)dict;
 

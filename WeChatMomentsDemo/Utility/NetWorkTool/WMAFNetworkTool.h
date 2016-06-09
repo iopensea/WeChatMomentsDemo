@@ -23,8 +23,8 @@ typedef void(^failureBlock)(NSURLSessionDataTask * task, NSError *error);
 typedef void(^GetDataArraySuccessBlock)(NSArray *dataArr);
 typedef void(^GetDataFailureBlock)(NSError *error);
 
-typedef void(^GetDataSuccessBlock)(id obj);
 typedef void(^GetDataDictSuccessBlock)(NSDictionary *dataDict);
+typedef void(^GetDataSuccessBlock)(id obj);
 
 //success
 typedef void (^requestSuccessBlock)(NSURLSessionDataTask * task, id responseObject);

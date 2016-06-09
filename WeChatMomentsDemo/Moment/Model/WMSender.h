@@ -1,5 +1,5 @@
 //
-//  WMUser.h
+//  WMSender.h
 //  WeChatMomentsDemo
 //
 //  Created by apple on 16/6/9.
@@ -7,17 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface WMUser : NSObject
 
-@property (nonatomic, copy) NSString *profileimage;
+@interface WMSender : NSObject
 
 @property (nonatomic, copy) NSString *avatar;
-
 @property (nonatomic, copy) NSString *nick;
-
 @property (nonatomic, copy) NSString *username;
 
-
-+ (instancetype)userWithDict:(NSDictionary *)dict;
++ (instancetype) senderWithDict:(NSDictionary *)dict;
 
 @end

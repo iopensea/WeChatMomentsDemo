@@ -9,8 +9,8 @@
 #import <UIImageView+WebCache.h>
 
 #import "MomentHeaderCell.h"
-#import "WMUser.h"
 #import "WMImageView.h"
+#import "WMUser.h"
 
 @interface MomentHeaderCell ()
 
@@ -37,16 +37,25 @@ static NSString *wmMomentHeaderCell = @"wmMomentHeaderCell";
 
 }
 
++ (instancetype) momentHeaderCellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath {
+    [tableView registerClass:[MomentHeaderCell class] forCellReuseIdentifier:wmMomentHeaderCell];
+    MomentHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:wmMomentHeaderCell forIndexPath:indexPath];
+    
+    cell.avatarImageView.layer.cornerRadius = 10;
+    cell.avatarImageView.layer.masksToBounds = YES;
+    
+    return cell;
+}
+
 + (instancetype) momentHeaderCellWithTableView:(UITableView *)tableView {
     [tableView registerClass:[MomentHeaderCell class] forCellReuseIdentifier:wmMomentHeaderCell];
-    
     MomentHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:wmMomentHeaderCell];
     
-    if (!cell) {
-        cell = [[MomentHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:wmMomentHeaderCell];
+    if ( nil == cell) {
+        cell = [[MomentHeaderCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:wmMomentHeaderCell];
     }
     
-    cell.avatarImageView.layer.cornerRadius = 5;
+    cell.avatarImageView.layer.cornerRadius = 10;
     cell.avatarImageView.layer.masksToBounds = YES;
     
     return cell;
@@ -91,9 +100,9 @@ static NSString *wmMomentHeaderCell = @"wmMomentHeaderCell";
     self.avatarImageView = [[WMImageView alloc]init];
     self.profileImageView = [[WMImageView alloc]init];
     
+    [self.contentView addSubview:self.profileImageView];
     [self.contentView addSubview:self.nickLabel];
     [self.contentView addSubview:self.avatarImageView];
-    [self.contentView addSubview:self.profileImageView];
 }
 
 - (void)layoutSubviews {
@@ -104,19 +113,18 @@ static NSString *wmMomentHeaderCell = @"wmMomentHeaderCell";
         make.right.equalTo(self.contentView.right);
         make.top.equalTo(self.contentView.top);
         make.bottom.equalTo(self.contentView.bottom);
-        
     }];
 
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView.right).offset(-10);
         make.width.and.height.equalTo(50);
+        make.bottom.equalTo(self.contentView.bottom).offset(-10);
     }];
     
     [self.nickLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.contentView.left).offset(10);
         make.right.equalTo(self.avatarImageView.left).offset(-10);
         make.top.equalTo(self.avatarImageView.top);
-
     }];
 }
 

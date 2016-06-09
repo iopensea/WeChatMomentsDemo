@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) WMUser *wmUser;
 
++ (instancetype)momentHeaderCellWithTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath;
 + (instancetype)momentHeaderCellWithTableView:(UITableView *)tableView;
 
 @end

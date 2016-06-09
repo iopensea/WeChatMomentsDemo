@@ -1,44 +1,35 @@
 //
-//  WMUser.m
+//  WMImage.m
 //  WeChatMomentsDemo
 //
 //  Created by apple on 16/6/9.
 //  Copyright © 2016年 apple. All rights reserved.
 //
 
-#import "WMUser.h"
+#import "WMImage.h"
 #import <YYModel.h>
 
-/* UserInfo
- *
- *
- */
+@implementation WMImage
 
-@implementation WMUser
-
-+ (instancetype)userWithDict:(NSDictionary *)dict {
++ (instancetype) imageUrlWithDict:(NSDictionary *)dict {
     
     NSLog(@"dict=%@",dict);
     
-    [WMUser modelCustomPropertyMapper];
-    
     id obj = [[self alloc]init];
     
-    obj = [WMUser yy_modelWithJSON:dict];
+    obj = [WMImage yy_modelWithJSON:dict];
     
     return obj;
 }
 
-+ (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"profileimage" : @"profile-image"};
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
+- (void)encodeWithCoder:(NSCoder *)aCoder{
     [self yy_modelEncodeWithCoder:aCoder];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super init]; return [self yy_modelInitWithCoder:aDecoder]; }
+    self = [super init];
+    return [self yy_modelInitWithCoder:aDecoder];
+}
 
 - (id)copyWithZone:(NSZone *)zone {
     return [self yy_modelCopy];
