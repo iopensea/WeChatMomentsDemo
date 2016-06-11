@@ -10,7 +10,7 @@
 
 @interface WMImage : NSObject
 
-@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *imageurl;
 
 + (instancetype) imageUrlWithDict:(NSDictionary *)dict;
 

@@ -149,7 +149,7 @@ static NSString *TweetOfexpertID = @"Tweet";
     if (indexPath.section == 0) {
         cellHeight = kCellHeight * 3;
     } else {
-        cellHeight = kCellHeight * 3;
+        cellHeight = kCellHeight * 4;
     }
     
     return kCellHeight;

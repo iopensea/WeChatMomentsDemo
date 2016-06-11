@@ -22,6 +22,10 @@
     return obj;
 }
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"imageurl" : @"url"};
+}
+
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     [self yy_modelEncodeWithCoder:aCoder];
 }
