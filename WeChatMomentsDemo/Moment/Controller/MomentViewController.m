@@ -147,7 +147,7 @@ static NSString *TweetOfexpertID = @"Tweet";
     CGFloat cellHeight = 0.0;
     
     if (indexPath.section == 0) {
-        cellHeight = kCellHeight;
+        cellHeight = kCellHeight * 3;
     } else {
         cellHeight = kCellHeight * 3;
     }
@@ -160,17 +160,23 @@ static NSString *TweetOfexpertID = @"Tweet";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     if (indexPath.section == 0) {
-
         //测试代码
         //debug - header cell layout
         MomentHeaderCell *cell = [MomentHeaderCell momentHeaderCellWithTableView:tableView forIndexPath:indexPath];
         cell.wmUser = self.users[indexPath.row];
+        cell.backgroundColor = [UIColor lightGrayColor];
         return cell;
     } else {
         //测试代码
         //debug - header cell layout
         MomentCell *cell = [MomentCell momentCellWithTableView:tableView forIndexPath:indexPath];
         cell.wmTweet = self.tweets[indexPath.row];
+        
+        if (indexPath.row % 2) {
+            cell.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
+        } else {
+            cell.backgroundColor = [UIColor whiteColor];
+        }
         return cell;
     }
 }
@@ -197,8 +203,6 @@ static NSString *TweetOfexpertID = @"Tweet";
 }
 
 #pragma mark - test method for debug
-
-#pragma mark - image cache
 
 /**
  * imageCachePath: @"imageCache"

@@ -72,7 +72,7 @@ static NSString * tweetPath = @"user/jsmith/tweets";
                      success:^(NSURLSessionDataTask *task, id responseObject) {
                          
                          NSArray *dictArr = @[responseObject];
-                         NSLog(@"user responseObject=%@",responseObject);
+//                         NSLog(@"user responseObject=%@",responseObject);
                          NSMutableArray *arrMutableUser = [NSMutableArray arrayWithCapacity:dictArr.count];
                          
                          for (NSDictionary *dict in dictArr) {
@@ -101,7 +101,7 @@ static NSString * tweetPath = @"user/jsmith/tweets";
                          
                          NSArray *dictArr = responseObject;
 //                         NSLog(@"[responseObject]=%@",dictArr);
-                         NSLog(@"tweet responseObject=%@",responseObject);
+//                         NSLog(@"tweet responseObject=%@",responseObject);
                          NSLog(@"dictArr.count=%ld",dictArr.count);
                          NSMutableArray *arrMutableMoment = [NSMutableArray arrayWithCapacity:dictArr.count];
                          
@@ -110,7 +110,7 @@ static NSString * tweetPath = @"user/jsmith/tweets";
                              [arrMutableMoment addObject:tweet];
                          }
                          
-                         if(cache && arrMutableMoment.count>0){
+                         if(cache && arrMutableMoment.count > 0){
                              NSString *filePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
                              filePath  = [filePath stringByAppendingFormat:@"/%@.data",ID];
                              [NSKeyedArchiver archiveRootObject:arrMutableMoment toFile:filePath];
